@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% block title %}
+    <title>Help Page</title>{% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        h2 {
+            font-family: 'Times New Roman';
+            font-size: 50px;
+            text-align: center;
+            text-size-adjust: 10px;
+            background-color: aliceblue;
+        }
+
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+            .active, .accordion:hover {
+                background-color: #ccc;
+            }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+            font-family: 'Times New Roman';
+            font-size: 20px;
+            font-style: normal;
+        }
+
+        .container1 {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card-body1 {
+            border: 5px solid grey;
+            background-color: rgb(181, 228, 247);
+            font-size: 15px;
+            font-family: 'Times New Roman';
+        }
+    </style>
+</head>
+<body>
+    <!--<h1>Help Page</h1>
+    <div class="container1">
+        <div class="card-body1">
+            <p>
+                Welcome to Vaccine Management System, a website aimed to increase the ease of
+                following a proper vaccination plan. We hope to help our users as much as possible.
+                Here is a few guidelines if you face any issue:
+            </p>
+            <button class="accordion"><h3>Registration</h3></button>
+            <div class="panel">
+                <p>
+                    Registration Requirements:<br />
+                    <ul>
+                        <li>Username: For username, it is required to use 150 characters or fewer. Letters, digits and @/./+/-/_ only. Any other characters will be considered invalid.</li>
+                        <li>
+                            Password:<ol>
+                                <li>Your password can’t be too similar to your other personal information.</li>
+                                <li>Your password must contain at least 8 characters.</li>
+                                <li>Your password can’t be a commonly used password.</li>
+                                <li>Your password can’t be entirely numeric.</li>
+                                <li>After entering username and password, you are required to confirm your password.</li>
+                                <li>If the password is valid, then your account is created. You can log in to the website after registration</li>
+                            </ol>
+                        <li>If username and password is invalid, there will be guidelines to solve the problem.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <button class="accordion"><h3>Profile</h3></button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <button class="accordion"><h3>Appointments</h3></button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+        -->
+</body>
+</html>
+{% endblock %}

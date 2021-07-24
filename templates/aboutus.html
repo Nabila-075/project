@@ -1,0 +1,77 @@
+{% load static %}
+<html>
+<head>
+    <style>
+        h1 {
+            text-align: center;
+            background-color: cadetblue;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        h2 {
+            text-align: center;
+            background-color: azure;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        div {
+            background-color: antiquewhite;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .Motivation {
+            border-block-color: black;
+            background-color: cadetblue;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        li {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        function goBack() {
+            window.history.back("base.html")
+        }
+    </script>
+    <title>About Us</title>
+    <link rel="shortcut icon" href="{%static 'logo.png' %}" />
+</head>
+<body>
+    <button onclick="goBack()">Home</button>
+    <h1>Our Group Members</h1>
+    <h2>Member 1:</h2>
+    <div>
+        <p>Nafisha Binte Moin</p>
+        <p>ID: 2018-3-60-047</p>
+        <p>Email: 2018-3-60-047@std.ewubd.edu</p>
+        <br />
+    </div>
+    <h2>Member 2:</h2>
+    <div>
+        <p>Nabila Islam</p>
+        <p>ID: 2018-3-60-075</p>
+        <p>Email: 2018-3-60-075@std.ewubd.edu</p>
+        <br />
+    </div>
+    <h2>Member 3:</h2>
+    <div>
+        <p>Lubaba Alam Chhoa</p>
+        <p>ID: 2018-3-60-032</p>
+        <p>Email: 2018-3-60-032@std.ewubd.edu</p>
+        <br />
+    </div>
+    <br />
+    <div class="Motivation">
+        <h2>Motivations for this project:</h2>
+        <ul>
+            <li>Increasing vaccination coverage throughout the country</li>
+            <li>Keep track of the vaccination plan of the users</li>
+            <li>Notify the user ahead of time about the next dose or vaccine</li>
+            <li>Store the medical information of the user</li>
+            <li>Online scheduling and online appointments</li>
+        </ul>
+    </div>
+</body>
+</html>

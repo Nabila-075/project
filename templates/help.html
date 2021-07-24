@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    {% block title %}
+    <title>Help Page</title>{% endblock %}
+    <link rel="shortcut icon" href="{%static 'reslogo.png' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        p{
+            font-family: 'Times New Roman';
+            font-display:fallback;
+            font-size: 20px;
+        }
+        h2 {
+            font-family: 'Times New Roman';
+            font-size: 50px;
+            text-align: center;
+            text-size-adjust: 10px;
+            background-color: aliceblue;
+        }
+        .container1 {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card-body1 {
+            border: 5px solid grey;
+            background-color: rgb(181, 228, 247);
+            font-size: 15px;
+            font-family: 'Times New Roman';
+        }
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+            font-family: 'Times New Roman';
+            font-size: 20px;
+            font-style: normal;
+        }
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+            .active, .accordion:hover {
+                background-color: #ccc;
+            }
+
+    </style>
+</head>
+<body>
+    <h1>Help Page</h1>
+    <div class="container1">
+        <div class="card-body1">
+            <p>
+                Welcome to Vaccine Management System, a website aimed to increase the ease of
+                following a proper vaccination plan. We hope to help our users as much as possible.
+                Here is a few guidelines if you face any issue:
+            </p>
+            <button class="accordion"><h3>Registration</h3></button>
+            <div class="panel">
+                <h4>Registration Requirements:</h4>
+                <ul>
+                    <li>Username: For username, it is required to use 150 characters or fewer. Letters, digits and @/./+/-/_ only. Any other characters will be considered invalid.</li>
+                    <li>
+                        Password: For password ensure to follow the given rules
+                        <ul>
+                            <li>Your password cannot be too similar to your other personal information.</li>
+                            <li>Your password must contain at least 8 characters.</li>
+                            <li>Your password cannot be a commonly used password.</li>
+                            <li>Your password cannot be entirely numeric.</li>
+                            <li>After entering username and password, you are required to confirm your password.</li>
+                            <li>If the password is valid, then your account is created. You can log in to the website after registration</li>
+                            <li>If username and password is invalid, there will be guidelines to solve the problem.</li>
+                        </ul>
+                </ul>
+            </div>
+            <button class="accordion"><h3>Profile</h3></button>
+            <div class="panel">
+                <h4>Profile Requirements:</h4>
+                <ul>
+                    <li>
+                        You are required to update your profile information. The information must be valid.
+                        <ul>
+                            <li>Fill out your name as per your national ID, passport or any official identification.</li>
+                            <li>Enter your age</li>
+                            <li>Enter proper contact information like your phone number and email id, so that we can easily communicate with you</li>
+                            <li>Enter your permanent address</li>
+                        </ul>
+                    <li>You can view or edit your profile at any time you want</li>
+                </ul>
+            </div>
+
+            <button class="accordion"><h3>Appointments</h3></button>
+            <div class="panel">
+                <h4>Schedule Appointments:</h4>
+                <ul>
+                    <li>
+                        You can schedule appointments any time you want
+                        <ul>
+                            <li>Fill out city name</li>
+                            <li>Choose any of the available clinics as per your choice</li>
+                            <li>Choose between the dates</li>
+                            <li>Choose between the available timeslot. You can pick between morning times or evening times.</li>
+                        </ul>
+                    <li>If the scheduling is successful, you will receive a confirmation mail.</li>
+                    <li>You can Read/Check appointments at any time you want</li>
+                </ul>
+                <h4>Reschedule Appointments:</h4>
+                <ul>
+                    <li>
+                        You can reschedule appointments any time you want
+                        <ul>
+                            <li>Fill out city name</li>
+                            <li>Choose any of the available clinics as per your choice</li>
+                            <li>Choose between the dates</li>
+                            <li>Choose between the available timeslot. You can pick between morning times or evening times.</li>
+                        </ul>
+                    <li>If the rescheduling is successful, you will receive a confirmation mail.</li>
+                    <li>You can Read/Check appointments at any time you want</li>
+                </ul>
+                <h4>Cancel Appointments:</h4>
+                <p>In order to cancel appointments, go to cancel appointments can delete the appointment.</p>
+            </div>
+            <button class="accordion"><h3>Vaccine Information</h3></button>
+            <div class="panel">
+                <h4>List of Available Vaccine:</h4>
+                <p>
+                    Users can see lists of available vaccines any time any wish. This page is available for unregistered and logged out users.<br />
+                    In order to see list of available vaccines:<a href="{% url 'vaclist' %}">Click here</a>
+                </p>
+                <h4>Vaccine Chart:</h4>
+                <p>
+                    Users can see lists of approved vaccines at any time any wish. Many information about vaccine name, disease name, costing, manufacterer company name and country is given at the charts. This page is available for unregistered and logged out users.<br />
+                    In order to see vaccine charts:<a href="{% url 'vacChart' %}">Click here</a>
+                </p>
+                <h4>Immunization Schedule:</h4>
+                <p>
+                    Users can see the government approved immunization schedule and proper vaccination plan. Viewers of this page can use this to be able to confirm date and timelines for vaccination. This page is available for unregistered and logged out users as well.<br />
+                    In order to see the immunization schedule:<a href="{% url 'schedule' %}">Click here</a>
+                </p>
+                <h4>Covid Information</h4>
+                <p>Our website provides accurate information and health guidelines for COVID-19. Proper health quidelines, symptoms, prevention and treatment are given in the Covid Info page</p>
+            </div>
+            <button class="accordion"><h3>About Us</h3></button>
+            <div class="panel">
+                <p>The About Us section provides information about the members behind the creation of this website</p>
+                <h4>About Us:</h4>
+                <p>
+                    Provides information about the group members and the motivations behind this project
+                </p>
+                <h4>Group Members:</h4>
+                <p>
+                     Provides a brief introduction to our group members.
+                </p>
+                <h4>Project Info:</h4>
+                <p>
+                    Provides more information about our website. Our motivations and customer reviews are available as well.
+                </p>
+            </div>
+            <p>Thank you for visiting our website. For more queries please contact us: <a href="{% url 'contact' %}">here</a></p>
+        </div>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+{% endblock %}

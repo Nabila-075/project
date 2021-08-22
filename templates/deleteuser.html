@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+<html>
+<head>
+    {% block title %}
+    <title>Confirm Delete</title>{% endblock %}
+    <style>
+        button {
+            align-content: center;
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        p {
+            align-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+{% block content %}
+<body>
+    <form action="." method="POST">
+        {% csrf_token %}
+        <h1>Confirm deletetion of the user {{object.first_name}} {{object.last_name}}?</h1>
+        <p>
+            <button><input type="submit" value="YES" /></button>
+            <button><a href="{% url 'adminuser' %}">Cancel</a></button>
+        </p>
+    </form>
+</body>
+</html>
+{% endblock %}

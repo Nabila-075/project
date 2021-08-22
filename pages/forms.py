@@ -1,5 +1,6 @@
 from django import forms
-from .models import UserAccount
+from django.forms import ModelForm, fields
+from .models import UserAccount,Restaurant
 
 class ProfileForm(forms.Form):
     first_name = forms.CharField(label="First Name", max_length=100)
@@ -24,5 +25,8 @@ class Subscribe(forms.Form):
         return self.Message
 
 
-
+class ResForm(ModelForm):
+  class Meta:
+    model = Restaurant
+    fields = '__all__'
 
